@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Javascript Overview 1.1 Variables Code Example</title>
+    <!-- External Style sheets -->
+    <link rel="stylesheet" type="text/css" href="CSS/reset.css">
+    <link rel="stylesheet" type="text/css" href="CSS/fonts.css">
+    <link rel="stylesheet" type="text/css" href="CSS/global_css.css">
+</head>
+<body>
+<h1>Javascript Overview</h1>
+<h2>By: Stefano DeRose</h2>
+<noscript><br/><em> This webpage will require JavaScript to be enabled (Enable Scripts in your
+    Browsers Options).</em></noscript>
+
+<div id="navigation">
+    <ul id="mainNav">
+        <li><a href="StefanoDeRose_JSFinal.html"
+               onClick="document.getElementById('sideNav-JWB').style.display = 'none';
+        document.getElementById('sideNav-JLF').style.display = 'block';">
+            JavaScript Language Fundamentals</a></li>
+        <li><a href="#"
+               onClick="document.getElementById('sideNav-JLF').style.display = 'none';
+        document.getElementById('sideNav-JWB').style.display = 'block'; return false">
+            JavaScript - Web Document Interaction </a></li>
+    </ul>
+</div>
+<div id="mainContent">
+    <div id="sideNav">
+        <ul id="sideNav-JLF" style="display: block;">
+            <li><a href="variables.html">1.1. Variables</a></li>
+            <li><a href="operators.html">1.2. Operators</a></li>
+            <li><a href="conditional.html">1.3. Conditional Statements (if, ...else if, switch)</a>
+            </li>
+            <li><a href="loops.html">1.4. Loops (for loops ands while loops)</a></li>
+            <li><a href="functions.html">1.5. Functions</a></li>
+            <li><a href="objects.html">1.6. JS Objects - General Overview</a></li>
+            <li><a href="built-in.html">1.7. JS Built-in Objects - Date, Math, Numbers, RegExp,
+                Global</a></li>
+            <li><a href="arrays.html">1.8. Array Object</a></li>
+            <li><a href="strings.html">1.9. String Object</a></li>
+        </ul>
+        <ul id="sideNav-JWB" style="display: none;">
+            <li><a href="browser.html">2.1. Browser Objects</a></li>
+            <li><a href="web.html">2.2. HTML Objects</a></li>
+            <li><a href="events.html">2.3. Events</a></li>
+        </ul>
+    </div>
+
+    <div id="content" class="float-right">
+        <section class="nameDefinition">
+            <h3>1.1 Variables Code Example</h3>
+        </section>
+        <p>
+            <script>
+                var aVariable = " // var Keyword initiates a Variable; and an Identifier (Name) is added for reference.";
+                var CaseSensitive = "// This Variable is an example of Case sensitivity.";
+                var caseSensitive = "// A different Variable then CaseSensitive";
+                var multipleDeclarations = "// Multiple variables using var keyword only once.", multipleDeclarations1, a, AnotherVariable = "// Multiple variables using var keyword only once.";
+                var aIntegerValue = 10
+                var aFloatingPointValue = 9.9999;
+                var aStringValue = "// This is a string value written inside of double or single quotes";
+                var aStringNumberValue = "// 100";
+                var myTest = "// This is a test call \"My Test\"";
+                var a = 5
+                var aVariableCalculation = a + 10;
+                var addingStrings = "// One String using +, between quotes. " + "// New String in quotes using Concatenation joins these two strings.";
+                var anotherAssignedVariable = "// Some Data";
+                var openVariable = anotherAssignedVariable;
+                var AssignedVariable1 = 10, AssignedVariable2 = 10;
+                var openVariable1 = AssignedVariable1 + AssignedVariable2;
+
+                document.write(" Here are different Variable Examples for JavaScript, all Variables Values are made as Comments for ease. Our First variable, aVariable stores the following example: " + aVariable + "<br/>");
+                document.write(" Our next variable, CaseSensitive stores the following example: " + CaseSensitive + " Variable caseSensitive: " + caseSensitive + "<br/>");
+                document.write("Next var multipleDeclarations, multipleDeclarations1, a, AnotherVariables "  + multipleDeclarations + "<br/>");
+                document.write("Numbers: var aIntegerValue "  + aIntegerValue + ". And var aFloatingPointValue: " + aFloatingPointValue + "<br/>");
+                document.write("Strings: var aStringValue " +  aStringValue + " the Variable var aStringNumberValue displays: " + aStringNumberValue + " as a String and is not treated as a number." + "<br/>");
+                document.write("Calculations can be made within variables that have number values, var aVariableCalculation shows this and adds 10 to var a: " + aVariableCalculation + " however if added to var aStringNumberValue: " + aVariableCalculation + aStringNumberValue + " is returned instead of 115 because of string Concatenation." + "<br/>");
+                document.write("Another example of Concatenation.(adding strings) is var addingStrings:" + addingStrings + " THis entire write is made using Concatenation." + "<br/>");
+                document.write("Assigning and reassigning Values: var anotherAssignedVariable is given" + anotherAssignedVariable + " the openVariable can be assigned data like so: var openVariable = AssignedVariable; , and now can also have: " + openVariable + "<br/>" )
+                document.write("AopenVariable1 is assigned the following: AssignedVariable1 + AssignedVariable2, witch then gives the following value: " + openVariable1 + "<br/>" )
+                document.write("Reserved words are not used in this example because they will cause errors, a variable named var cannot be used." + "<br/>" );
+                document.write("Without using the Special \" characters instead of just quotes" + myTest + " would not be displayed; but now is shown with quotes in our output code example.");
+            </script>
+        </p>
+    </div>
+    <section class="exampleCode">
+        <h4>Code Examples</h4>
+        <p id="variables" class="JScode" style="display:none">
+
+            // The following shows how the JavaScript code is written.<br/>
+            var aVariable = "// var Keyword initiates a Variable; and an Identifier(Name) is added
+            for reference.";<br/>
+            var CaseSensitive = "// This Variable is an example of Case sensitivity.";<br/>
+            var caseSensitive = "// A different Variable then CaseSensitive";<br/>
+            var multipleDeclarations = "// Multiple variables using var keyword only once.",
+            multipleDeclarations1, a, AnotherVariable = "// Multiple variables using var keyword
+            only once.";<br/>
+            var aIntegerValue = 10<br/>
+            var aFloatingPointValue = 9.9999;<br/>
+            var aStringValue = "// This is a string value written inside of double or single
+            quotes";<br/>
+            var aStringNumberValue = "// 100";<br/>
+            var a = 5<br/>
+            var aVariableCalculation = a + 10;<br/>
+            var addingStrings = "// One String using +, between quotes. " + "New String in quotes
+            using Concatenation joins these two strings.";<br/>
+            var anotherAssignedVariable = "// Some Data";<br/>
+            var openVariable = anotherAssignedVariable; // HEY<br/>
+            var AssignedVariable1 = 10, AssignedVariable2 = 10;<br/>
+            var openVariable1 = AssignedVariable1 + AssignedVariable2;<br/>
+
+            document.write(" Here are different Variable Examples for JavaScript. Our First
+            variable, aVariable stores the following example: " + aVariable + "<br/>");<br/>
+            document.write(" Our next variable, CaseSensitive stores the following example: " +
+            CaseSensitive + " Variable caseSensitive: " + caseSensitive + "<br/>");<br/>
+            document.write("Next var multipleDeclarations, multipleDeclarations1, a,
+            AnotherVariables " + multipleDeclarations + "<br/>");<br/>
+            document.write("Numbers: var aIntegerValue " + aIntegerValue + ". And var
+            aFloatingPointValue: " + aFloatingPointValue + "<br/>");<br/>
+            document.write("Strings: var aStringValue " + aStringValue + " the Variable var
+            aStringNumberValue displays: " + aStringNumberValue + " as a String and is not treated
+            as a number." + "<br/>");<br/>
+            document.write("Calculations can be made within variables that have number values, var
+            aVariableCalculation shows this and adds 10 to var a: " + aVariableCalculation + "
+            however if added to var aStringNumberValue: " + aVariableCalculation +
+            aStringNumberValue + " is returned instead of 115 because of string Concatenation." +
+            "<br/>");<br/>
+            document.write("Another example of Concatenation.(adding strings) is var addingStrings:"
+            + addingStrings + " THis entire write is made using Concatenation." + "<br/>");<br/>
+            document.write("Assigning and reassigning Values: var anotherAssignedVariable is given"
+            + anotherAssignedVariable + " the openVariable can be assigned data like so: var
+            openVariable = AssignedVariable; , and now can also have: " + openVariable + "<br/>"
+            )<br/>
+            document.write("AopenVariable1 is assigned the following: AssignedVariable1 +
+            AssignedVariable2, witch then gives the following value: " + openVariable1 + "<br/>"
+            )<br/>
+            document.write("Reserved words are not used in this example because they will cause
+            errors, a variable named var cannot be used." + "<br/>" );<br/>
+            document.write("Without using the Special \" characters instead of just quotes" + myTest
+            + " would not be displayed; but now is shown with quotes in our output code example." +
+            "<br/>" + " Hope you enjoyed this example code page " + myName + ".");</p>
+
+        <script>
+            function myFunction() {
+            var x = document.getElementById("variables");
+            if (x.style.display === "none") {
+            x.style.display = "block"
+            } else {
+            x.style.display = "none";
+            }
+            }
+        </script>
+        <input type="button" value="Show/Hide" onclick="myFunction()">
+    </section>
+</div>
+
+<footer>
+    <p class="copyright float-left">&copy; Copyright 2020, Stefano De Rose</p>
+    <p class="breadcrumbs float-right text-align-R"><a href="StefanoDeRose_JSFinal.html">JavaScript
+        Language Fundamentals</a>
+        <br/><a href="browser.html">JavaScript - Web Document Interaction</a></p>
+</footer>
+</body>
+</html>

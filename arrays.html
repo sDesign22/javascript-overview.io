@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>JavaScript Overview</title>
+    <!-- External Style sheets -->
+    <link rel="stylesheet" type="text/css" href="CSS/reset.css">
+    <link rel="stylesheet" type="text/css" href="CSS/fonts.css">
+    <link rel="stylesheet" type="text/css" href="CSS/global_css.css">
+</head>
+<body>
+<noscript>This website will require JavaScript to be enabled(Enable Scripts in your browsers
+    options).
+</noscript>
+
+<h1>Javascript Overview</h1>
+<h2>By: Stefano DeRose</h2>
+
+<div id="navigation">
+    <ul id="mainNav">
+        <li><a href="StefanoDeRose_JSFinal.html" onClick="document.getElementById('sideNav-JWB').style.display = 'none';
+	document.getElementById('sideNav-JLF').style.display = 'block';"> JavaScript Language
+            Fundamentals</a></li>
+        <li><a href="#" onClick="document.getElementById('sideNav-JLF').style.display = 'none';
+	document.getElementById('sideNav-JWB').style.display = 'block'; return false"> JavaScript - Web
+            Document Interaction</a></li>
+    </ul>
+</div>
+
+<div id="mainContent">
+    <div id="sideNav">
+        <ul id="sideNav-JLF" style="display: block;">
+            <li><a href="variables.html">1.1. Variables</a></li>
+            <li><a href="operators.html">1.2. Operators</a></li>
+            <li><a href="conditional.html">1.3. Conditional Statements (if, ...else if, switch)</a>
+            </li>
+            <li><a href="loops.html">1.4. Loops (for loops ands while loops)</a></li>
+            <li><a href="functions.html">1.5. Functions</a></li>
+            <li><a href="objects.html">1.6. JS Objects - General Overview</a></li>
+            <li><a href="built-in.html">1.7. JS Built-in Objects - Global, Statements, Numbers,
+                Date, Math</a></li>
+            <li><a href="arrays.html">1.8. Array Object</a></li>
+            <li><a href="strings.html">1.9. String Object</a></li>
+        </ul>
+        <ul id="sideNav-JWB" style="display: none;">
+            <li><a href="browser.html">2.1. Browser Objects</a></li>
+            <li><a href="web.html">2.2. HTML Objects</a></li>
+            <li><a href="events.html">2.3. Events</a></li>
+        </ul>
+    </div>
+
+    <div id="content" class="float-right">
+        <section class="nameDefinition">
+            <h3>1.8. Array Object</h3>
+            <p>Can hold any type of data in each slot - Arrays are written with square brackets.
+                Array items are separated by commas. Data values (Elements) - Organized under a
+                single name. </p>
+        </section>
+        <section class="generalSyntax">
+            <h4>Array Object Syntax</h4>
+            <p>Using Array literal: Is the easiest way to create a JavaScript Array.
+            <p class="JScode">var anArray = [item0, item2, "Can be AnyValue"];</p>
+            <p>Using new Keyword: The following example also creates an Array, and assigns values to
+                it:</p>
+            <p class="JScode">var anArray = new Array(item0, item2, "Can be AnyValue");</p>
+            <p><b>Access Elements of an Array:</b> <br/> Access an array element by referring to the
+                index number, indexes start with [0] (Machine Code);<br/>
+                Full array can be accessed by referring to the array name; myArray. <br/>
+                <b>Multidimensional Arrays:</b> Can be represented by arrays of arrays.</p>
+            <p class="JScode">var myArray[0] [0]; var myArray[2] [4] // This examples shows a
+                Multidimensional Array (array in array).</p>
+        </section>
+        <section class="properties">
+            <h4>Array Object Properties</h4>
+            <p class="JScode">constructor - Returns the function that created the Array object's
+                prototype.<br/>
+                length - Sets or returns the number of elements in an array.<br/>
+                prototype - Allows you to add properties and methods to an Array object.</p>
+        </section>
+
+        <section class="exampleCode">
+            <section class="methods">
+                <h4>Array Object Methods</h4>
+                <p class="JScode">concat() - Joins two or more arrays, and returns a copy of the
+                    joined arrays - Manipulation.<br/>
+                    copyWithin() - Copies array elements within the array, to and from specified
+                    positions.<br/>
+                    entries() - Returns a key/value pair Array Iteration Object.<br/>
+                    every() - Checks if every element in an array pass a test - OP.<br/>
+                    fill() - Fill the elements in an array with a static value.<br/>
+                    filter() - Creates a new array with every element in an array that pass a test -
+                    OP.<br/>
+                    find() - Returns the value of the first element in an array that pass a test -
+                    OP.<br/>
+                    findIndex() - Returns the index of the first element in an array that pass a
+                    test - OP.<br/>
+                    forEach() - Calls a function for each array element - OP.<br/>
+                    from() - Creates an array from an object.<br/>
+                    includes() - Check if an array contains the specified element.<br/>
+                    indexOf() - Search the array for an element and returns its position -
+                    Finding/OP.<br/>
+                    isArray() - Checks whether an object is an array.<br/>
+                    join() - Joins all elements of an array into a string - Converting Array into
+                    single string.<br/>
+                    keys() - Returns a Array Iteration Object, containing the keys of the original
+                    array.<br/>
+                    lastIndexOf() - Search the array for an element, starting at the end; returns
+                    its position -Find/OP.<br/>
+                    map() - Creates new array with the result of calling a function for each array
+                    element - OP.<br/>
+                    pop() - Removes the last element of an array, and returns that element -
+                    Stack.<br/>
+                    push() - Adds new elements to the end of an array, and returns the new length -
+                    Stack.<br/>
+                    reduce() - Reduce the values of an array to a single value (going left-to-right)
+                    - OP.<br/>
+                    reduceRight() - Reduce the values of an array to a single value (going
+                    right-to-left) - OP.<br/>
+                    reverse() - Reverses the order of the elements in an array - Reordering.<br/>
+                    shift() - Removes the first element of an array, and returns that element -
+                    Queue.<br/>
+                    slice() - Selects a part of an array, and returns the new array - Copy
+                    Array-part/Manipulation.<br/>
+                    some() - Checks if any of the elements in an array pass a test - OP.<br/>
+                    sort() - Sorts the elements of an array - Reordering.<br/>
+                    splice() - Adds/Removes elements from an array - Manipulation.<br/>
+                    toString() - Converts an array to a string, and returns the result - Conversion.<br/>
+                    unshift() - Adds new elements to the beginning of an array, and returns the new
+                    length - Queue.<br/>
+                    valueOf() - Returns the primitive value of an array - Conversion.</p>
+            </section>
+            <p class="JScode"> var nameExample, nameExample1, a, AnotherVariable; // This creates
+                several different Variables, the var keyword is used only once for creating multiple
+                Variables. </p>
+            <section class="exampleCode">
+
+                <h4>Code Examples</h4>
+
+                <p id="variables" class="JScode" style="display:none">
+
+                    var addVariable = 3 + 2;
+                    var subVariable = 3 - 2;
+                    var multiplyVariable = 2 * 2;
+                    var divideVariable = 2 / 2;
+
+                    document.write("This code displays working Operators, within each variable is an
+                    example and will be explained with comments //. <br/> First var addVariable = 3
+                    + 2 = " + addVariable + " // This adds the two integers" + "<br/>");
+                    document.write("var subVariable = 3 - 2 = " + subVariable + "// This subtracts
+                    the integers. " + "<br/>");
+                    document.write("var multiplyVariable = 2 * 2 = " + multiplyVariable + " // This
+                    multiples the integers. " + "<br/>");
+                    addVariable++;
+                    document.write("var divideVariable = 2 / 2; = " + divideVariable + " // This
+                    divides the integers. " + "<br/>" + addVariable + "// addVariable Incremented
+                    inside the code (addVariable++) and now is 6." + "<br/>");
+                    addVariable--
+                    document.write(addVariable + " // addVariable Decremented inside the code
+                    (addVariable--) and now is 5 again." + "<br/>" + " // each example has the
+                    Assignment operator; Here are some more Assignment Operator examples:" + "<br/>");
+                    addVariable += addVariable
+                    document.write(addVariable + " // addVariable Decremented inside the code
+                    (addVariable--) and now is 5 again." + "<br/>" + " // each example has the
+                    Assignment operator; Here are some more Assignment Operator examples:" + "<br/>");
+                    addVariable /= 10
+                    document.write(addVariable + " // addVariable Decremented inside the code
+                    (addVariable--) and now is 5 again." + "<br/>" + " // each example has the
+                    Assignment operator; Here are some more Assignment Operator examples:" + "<br/>");
+                    addVariable %= 2
+                    document.write(multiplyVariable + " // addVariable Decremented inside the code
+                    (addVariable--) and now is 5 again." + "<br/>" + " // The Logical operators are
+                    within Statements and Loops subsections, this is to really show their full
+                    potential in Control Flow." + "<br/>");;</p>
+
+                <script>
+                    function myFunction() {
+                    var x = document.getElementById("variables");
+                    if (x.style.display === "none") {
+                    x.style.display = "block"
+                    } else {
+                    x.style.display = "none";
+                    }
+                    }
+                </script>
+                <p>Code Examples: <input type="button" value="Show/Hide" onclick="myFunction()"> ;
+                    or for a working Code Link: <a href="array_example.html">Click Here</a></p>
+            </section>
+    </div>
+</div>
+
+<footer>
+    <p class="copyright float-left">&copy; Copyright 2020, Stefano De Rose <br/> References: <a
+            href="https://www.w3schools.com/jsref/jsref_obj_array.asp">https://www.w3schools.com/jsref/jsref_obj_array.asp</a>
+    </p>
+    <p class="breadcrumbs float-right text-align-R"><a href="StefanoDeRose_JSFinal.html">JavaScript
+        Language Fundamentals</a>
+        <br/><a href="browser.html">JavaScript - Web Document Interaction</a></p>
+</footer>
+</body>
+</html>

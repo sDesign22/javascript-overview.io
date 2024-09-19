@@ -1,0 +1,177 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+ <title>JavaScript Overview</title>
+	<!-- External Style sheets -->
+ <link rel="stylesheet" type="text/css" href="CSS/reset.css">
+ <link rel="stylesheet" type="text/css" href="CSS/fonts.css">
+ <link rel="stylesheet" type="text/css" href="CSS/global_css.css">
+</head>
+<body>
+
+ <h1>Javascript Overview</h1>
+ <h2>By: Stefano DeRose</h2>
+ 
+<div id="navigation">
+<ul id="mainNav">
+	<li><a href="StefanoDeRose_JSFinal.html" onClick="document.getElementById('sideNav-JWB').style.display = 'none'; 
+	document.getElementById('sideNav-JLF').style.display = 'block';"> JavaScript Language Fundamentals</a></li>
+	<li><a href="#" onClick="document.getElementById('sideNav-JLF').style.display = 'none';
+	document.getElementById('sideNav-JWB').style.display = 'block'; return false"> JavaScript - Web Document Interaction</a></li>
+</ul>
+</div>
+<div id="mainContent">
+<div id="sideNav">
+ <ul id="sideNav-JLF" style="display: block;">
+	<li><a href="variables.html">1.1. Variables</a></li>
+	<li><a href="operators.html">1.2. Operators</a></li>
+	<li><a href="conditional.html">1.3. Conditional Statements (if, ...else if, switch)</a></li>
+	<li><a href="loops.html">1.4. Loops (for loops ands while loops)</a></li>
+	<li><a href="functions.html">1.5. Functions</a></li>
+	<li><a href="objects.html">1.6. JS Objects - General Overview</a></li>
+	<li><a href="built-in.html">1.7. JS Built-in Objects - Date, Math, Numbers, RegExp, Global</a></li>
+	<li><a href="arrays.html">1.8. Array Object</a></li>
+	<li><a href="strings.html">1.9. String Object</a></li>
+ </ul>
+ <ul id="sideNav-JWB" style="display: none;"> 
+	<li><a href="browser.html">2.1. Browser Objects</a></li> 
+	<li><a href="web.html">2.2. HTML Objects</a></li> 
+	<li><a href="events.html">2.3. Events</a></li> 
+ </ul> 
+</div> 
+
+<div id="content" class="float-right"> 
+ <section class="nameDefinition">
+	<h3>1.2 Operators</h3> 
+	<p>Operators are used in JavaScript to preform many different kinds of operations with variables; all operators are of different types.  <br/>
+	These different Operators all work in this similar way in JavaScript; with both the Operators and Operands: <br/>
+	Operator: Symbol used to act upon an item, an expression or a variable.<br/>
+	Operand: Is a variable that operators act upon.<br/> The operation (to be performed between the two operands) is defined by an operator; this is the basis of Operators. The many different types of Operators can be shown in the subsections below and work:.</p>
+    
+	<h4>Arithmetic Operators</h4>
+	References and Information: <a href="https://www.w3schools.com/js/js_arithmetic.asp">https://www.w3schools.com/js/js_arithmetic.asp</a>
+    <p>Operators perform arithmetic on numbers(or literals/variables).</p>
+ <ul>
+    <li>+ - Addition (Concatenation Operator)</li>
+    <li>- - Subtraction (Unary Operator) </li>
+    <li>/ - Division </li>
+    <li>* - Multiplication</li>
+    <li>% - Modulus</li>
+    <li>++ - Increment(Counts up 1) </li>
+    <li>-- - Decrement(Counts down 1) </li>
+ </ul>
+ <section class="generalSyntax"> 
+    <h4>Arithmetic Operators Syntax</h4> 
+	<p>These Operators perform arithmetic on numbers(or literals/variables).</p>
+	<p class="JScode">4 + 5; //result is 9. Or Concatenate Strings - var orStrings = "One String," + " Another String added.";<br/>
+	var aVariable = 12 - numberVariable; // Or can subtract a string(Unary Operator) var orStrings = "One String," - " Another String added."<br/> 
+	var aVariable = numberVariable / 5; // Divides <br/>
+	var x * 2; // Multiplies.	20 % 5; // Returns percent values. <br/>
+	var aVariable++ // Variable now Incremented;	20 -- x // Decrement(Counts down 1); <br/>
+ </section> 
+ 
+	<h4>Assignment Operators</h4>
+	References and Information: <a href="https://www.w3schools.com/js/js_assignment.asp">https://www.w3schools.com/js/js_assignment.asp</a>
+	<p>These Operators assign values to JavaScript variables.</p>
+ <ul>
+	<li>= - Assigns the value of the right side to the left side of the operator(Assignment Operator).</li>
+    <li>+= - Adds and assigns to a Variable or DataType.</li>
+    <li>-= - Subtracts and assigns the result to a Variable or DataType.</li>
+    <li>*= - Multiplies and assigns to a Variable or DataType.</li>
+    <li>/= - Divides and assigns to a Variable or DataType.</li>
+   <li> %= - Modulus result and assign to a Variable or DataType.</li>
+ </ul>
+ </section> 
+ <section class="generalSyntax"> 
+	<h4>Assignment Operators Syntax</h4>
+	<p class="JScode">var canAssign = 50; // The Assignment operator(equals sign) gives canAssign the value of 50.</p>    
+	<p class="JScode">var addAndAssign = 10 += "100" ; <br/> //results to 10100; ( += ) - Assignment operator can also be used to add(Concatenate) any code/data.</p>  
+	<p class="JScode">var subAndAssign -= 120;<br/> // Given subAndAssign is numeric, or results may be NaN(Not a Number).</p>
+	<p class="JScode"> x *= AnyDataVariable; // Multiplied and assigned to	aVariableDataValue /= 20; // Divided and assigned to 	209 %= percentVariable // Modulus result(percentage) and assign</p>
+	</section> 
+	
+	<h4>Comparison and Logical Operators</h4>
+	References and Information: <a href="https://www.w3schools.com/js/js_comparisons.asp">https://www.w3schools.com/js/js_comparisons.asp</a>
+	<p>Comparison operators return a value of "true" or "false":</p>
+ <ul>
+	<li>== - Equal to</li>
+    <li>=== - Equal value and equal type</li>
+    <li>!= - Not equal</li>
+	<li>!== - Not equal value or not equal type</li>
+    <li>> - Greater than</li>
+    <li>< - Less than </li>
+    <li>>= - Greater than or equal to </li>
+    <li><= - Less than or equal to</li>	
+ </ul>
+ 	<h5>Ternary Operator</h5>
+	<p>Also a conditional operator that assigns a value to a variable based on a condition.</p>
+	<h5>Logical Operators</h5>
+	<p>Are used to determine the logic between variables or values, and can be used together for more complex results.</p>
+ <ul>
+	<li>&& - And</li> 
+    <li>|| - Or</li>
+    <li>! - Not</li>
+ </ul>
+ <section class="generalSyntax"> 
+	<h4>Comparison and Logical Operators Syntax</h4> 
+	<p class="JScode">4 == 4; // result "true" <br/> 10 === "10"; // result "false"  <br/>
+	a != x;	a !== x;	// These operators compare variables, and can be used in many different ways. This example compares; is a != x? <br/> x > y //is x >(greater than) y?
+	10 < 12; // result "true"	x >= y;	10 <= 10; <br/> var compareVar = (age < 18) ? "Too young":"Old enough"; </p>  
+	<p class="JScode">(x > 10) ? "if true":"if false"; // Ternary Operator Compares based on a condition, and can produce a certain result.</p>
+	<p class="JScode">(1 < 10 && 10 > 1) // result "true"; in this case And is used to evaluate an expression. If once condition inside this statement were false, the result is "false".<br/>
+	(10 > 5 || y > 5) // result "true"; here using Or to determine Logic in a statement.<br/> !(x == y) // result "true"; and here even though x does not equal y the Not operators logic makes this result  not "false" but "true"(Reverse Logic). </p>
+ </section>
+ 
+ <section class="properties"> 
+    <h4>Operator Properties</h4>
+    <p>Operators have their own function as shown, but aside from this operators also have what is called <b>Operator Precedence</b> 
+ <b>Highest</b> [], (), ! ~ - + ++ --, * / %,	+ -,	== !=,	&& || ?,	= += -= *= /= %=,	, <b>Lowest</b>
+  	<p class="JScode"> var PrecedenceVar = (20 - 10) / 2; // the expression in Parentheses, enable the correct equation to be calculated.</p>
+ </section>
+ <section class="exampleCode"> 
+	
+	<h4>Code Examples</h4> 
+	
+	<p id="variables" class="JScode" style="display:none" > 
+	
+	var addVariable = 3 + 2;
+	var subVariable = 3 - 2;
+	var multiplyVariable = 2 * 2;
+	var divideVariable = 2 / 2;
+
+	document.write("This code displays working Operators, within each variable is an example and will be explained with comments //. <br/> First var addVariable = 3 + 2 = " + addVariable + " // This adds the two integers" + "<br/>");
+	document.write("var subVariable = 3 - 2 = " + subVariable + "// This subtracts the integers. " +  "<br/>");
+	document.write("var multiplyVariable = 2 * 2 = " + multiplyVariable + " // This multiples the integers. " +  "<br/>");
+	addVariable++;
+	document.write("var divideVariable = 2 / 2; = " + divideVariable + " // This divides the integers. " +  "<br/>" + addVariable + "// addVariable Incremented  inside the code (addVariable++) and now is 6." + "<br/>");
+	addVariable--
+	document.write(addVariable + " // addVariable Decremented inside the code (addVariable--) and now is 5 again." + "<br/>" + " // each example has the Assignment operator; Here are some more Assignment Operator examples:" + "<br/>");
+	addVariable += 	addVariable
+	document.write(addVariable + " // addVariable Decremented inside the code (addVariable--) and now is 5 again." + "<br/>" + " // each example has the Assignment operator; Here are some more Assignment Operator examples:" + "<br/>");
+ 	addVariable /= 10
+	document.write(addVariable + " // addVariable Decremented inside the code (addVariable--) and now is 5 again." + "<br/>" + " // each example has the Assignment operator; Here are some more Assignment Operator examples:" + "<br/>");
+	addVariable %= 2
+		document.write(multiplyVariable + " // addVariable Decremented inside the code (addVariable--) and now is 5 again." + "<br/>" + " // The Logical operators are within Statements and Loops subsections, this is to really show their full potential in Control Flow." + "<br/>");;</p>
+		
+	<script>
+	function myFunction() {
+	var x = document.getElementById("variables");
+	if (x.style.display === "none") {
+    x.style.display = "block"
+	} else {
+    x.style.display = "none";
+	}
+	}
+	</script>
+ <p>Code Examples: <input type="button" value="Show/Hide" onclick="myFunction()"> ;	or for a working Code Link: <a href="operator_example.html">Click Here</a></p>
+</section> 
+</div>
+</div>
+
+<footer>
+    <p class="copyright float-left">&copy; Copyright 2020, Stefano De Rose <br/> References: <a href="https://www.w3schools.com/js/js_operators.asp">https://www.w3schools.com/js/js_operators.asp</a></p>
+    <p class="breadcrumbs float-right text-align-R"> <a href="StefanoDeRose_JSFinal.html">JavaScript Language Fundamentals</a>
+    <br/><a href="browser.html" >JavaScript - Web Document Interaction</a></p>
+</footer>
+</body>
+</html>

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>JavaScript Overview</title>
+    <!-- External Style sheets -->
+    <link rel="stylesheet" type="text/css" href="CSS/reset.css">
+    <link rel="stylesheet" type="text/css" href="CSS/fonts.css">
+    <link rel="stylesheet" type="text/css" href="CSS/global_css.css">
+</head>
+<body>
+<noscript>This website will require JavaScript to be enabled(Enable Scripts in your browsers
+    options).
+</noscript>
+
+<h1>Javascript Overview</h1>
+<h2>By: Stefano DeRose</h2>
+
+<div id="navigation">
+    <ul id="mainNav">
+        <li><a href="StefanoDeRose_JSFinal.html" onClick="document.getElementById('sideNav-JWB').style.display = 'none';
+	document.getElementById('sideNav-JLF').style.display = 'block';"> JavaScript Language
+            Fundamentals</a></li>
+        <li><a href="#" onClick="document.getElementById('sideNav-JLF').style.display = 'none';
+	document.getElementById('sideNav-JWB').style.display = 'block'; return false"> JavaScript - Web
+            Document Interaction</a></li>
+    </ul>
+</div>
+<div id="mainContent">
+    <div id="sideNav">
+        <ul id="sideNav-JLF" style="display: block;">
+            <li><a href="variables.html">1.1. Variables</a></li>
+            <li><a href="operators.html">1.2. Operators</a></li>
+            <li><a href="conditional.html">1.3. Conditional Statements (if, ...else if, switch)</a>
+            </li>
+            <li><a href="loops.html">1.4. Loops (for loops ands while loops)</a></li>
+            <li><a href="functions.html">1.5. Functions</a></li>
+            <li><a href="objects.html">1.6. JS Objects - General Overview</a></li>
+            <li><a href="built-in.html">1.7. JS Built-in Objects - Global, Statements, Numbers,
+                Date, Math</a></li>
+            <li><a href="arrays.html">1.8. Array Object</a></li>
+            <li><a href="strings.html">1.9. String Object</a></li>
+        </ul>
+        <ul id="sideNav-JWB" style="display: none;">
+            <li><a href="browser.html">2.1. Browser Objects</a></li>
+            <li><a href="web.html">2.2. HTML Objects</a></li>
+            <li><a href="events.html">2.3. Events</a></li>
+        </ul>
+    </div>
+
+    <div id="content" class="float-right">
+        <section class="nameDefinition">
+            <h3>1.6. JS Objects General Overview</h3>
+            <p>Javascript is an Object based language and most of what you do involves manipulating
+                Objects; this range expands immensely. Objects are Variables too, but can contain
+                many values.
+                <br/> Objects are a collection of: Properties, Methods, Constructor(s); <br/>
+                <b>Properties:</b> Properties are the Values associated with an object.
+                <b>Methods:</b> Methods are the Actions that can be Performed on the object.
+                <b>Constructor(s):</b> Constructors are used to Create an object <br/>
+        </section>
+        <section class="generalSyntax">
+            <h4>JS Objects Syntax</h4>
+            <p><b>Define/Create:</b> Using the keyword <b>new</b> Followed by object Constructor().
+                In this function, we declare the initial properties/methods of the new object, and
+                usually assign them a pre-defined value.
+            <p class="JScode">var aObject = new Object("value", 2, anotherValueProperty, "for ref
+                Store.");</p>// This creates an object and stores values that can be stored for
+            further code reference/use.
+            <br/>Object Literal: Can also create Objects; <b>name:value</b> pairs (name and value
+            separated by a colon) called Properties or Methods.
+            <p class="JScode">var anObject = {a:1, asName:"value2", aProperty:3,
+                anotherValue:"Property"}; // This creates an object and stores values that can be
+                stored for further code reference/use. All Objects are properties and methods from
+                prototype</p>
+        </section>
+        <section class="properties">
+            <h4>Object Properties</h4>
+            <p>Can access object properties in two ways: 1. objectName.propertyName 2.
+                objectName["propertyName"] - this can also add a property <br/>
+                Object Constructors: For creating many objects of the same
+                "type"(values/parameters); the way to create an "object type", is to use an object
+                constructor function.
+                Object Types (Classes);</p>
+            <p class="JScode">Objects of the same type are created by calling the constructor
+                function with the new keyword: var objectVariable = new DataStore("information",
+                100, "Data", x);</p>
+        </section>
+        <section class="methods">
+            <h4>Object Methods</h4>
+            <p>Can assign a Method to a function:</p>
+            <p class="JScode">anObject.newProperty = aMethodFunction() { code to be executed; } //
+                This now a method as aMethodFunction().</p>
+            <p>Accessing Object Methods: Stored in properties as function definitions.</p>
+            <p class="JScode">anObject.anObjectMethod // Accessing method without parentheses
+                returns function definition.<br/>
+                <b>this</b> - Keyword refers to a current Object, It is preferred to use this in a
+                method to refer to a current object.
+            <p class="JScode">function Object{ this.methodRef(); } // Refers to the current
+                object.</p>
+        </section>
+        <section class="exampleCode">
+
+            <h4>Code Examples</h4>
+
+            <p id="variables" class="JScode" style="display:none">
+
+                var addVariable = 3 + 2;
+                var subVariable = 3 - 2;
+                var multiplyVariable = 2 * 2;
+                var divideVariable = 2 / 2;
+
+                document.write("This code displays working Operators, within each variable is an
+                example and will be explained with comments //. <br/> First var addVariable = 3 + 2
+                = " + addVariable + " // This adds the two integers" + "<br/>");
+                document.write("var subVariable = 3 - 2 = " + subVariable + "// This subtracts the
+                integers. " + "<br/>");
+                document.write("var multiplyVariable = 2 * 2 = " + multiplyVariable + " // This
+                multiples the integers. " + "<br/>");
+                addVariable++;
+                document.write("var divideVariable = 2 / 2; = " + divideVariable + " // This divides
+                the integers. " + "<br/>" + addVariable + "// addVariable Incremented inside the
+                code (addVariable++) and now is 6." + "<br/>");
+                addVariable--
+                document.write(addVariable + " // addVariable Decremented inside the code
+                (addVariable--) and now is 5 again." + "<br/>" + " // each example has the
+                Assignment operator; Here are some more Assignment Operator examples:" + "<br/>");
+                addVariable += addVariable
+                document.write(addVariable + " // addVariable Decremented inside the code
+                (addVariable--) and now is 5 again." + "<br/>" + " // each example has the
+                Assignment operator; Here are some more Assignment Operator examples:" + "<br/>");
+                addVariable /= 10
+                document.write(addVariable + " // addVariable Decremented inside the code
+                (addVariable--) and now is 5 again." + "<br/>" + " // each example has the
+                Assignment operator; Here are some more Assignment Operator examples:" + "<br/>");
+                addVariable %= 2
+                document.write(multiplyVariable + " // addVariable Decremented inside the code
+                (addVariable--) and now is 5 again." + "<br/>" + " // The Logical operators are
+                within Statements and Loops subsections, this is to really show their full potential
+                in Control Flow." + "<br/>");;</p>
+
+            <script>
+                function myFunction() {
+                var x = document.getElementById("variables");
+                if (x.style.display === "none") {
+                x.style.display = "block"
+                } else {
+                x.style.display = "none";
+                }
+                }
+            </script>
+            <p>Code Examples: <input type="button" value="Show/Hide" onclick="myFunction()"> ; or
+                for a working Code Link: <a href="object_example.html">Click Here</a></p>
+        </section>
+    </div>
+</div>
+
+<footer>
+    <p class="copyright float-left">&copy; Copyright 2020, Stefano De Rose <br/> References: <a
+            href="https://www.w3schools.com/js/js_object_definition.asp">https://www.w3schools.com/js/js_object_definition.asp</a>
+    </p>
+    <p class="breadcrumbs float-right text-align-R"><a href="StefanoDeRose_JSFinal.html">JavaScript
+        Language Fundamentals</a>
+        <br/><a href="browser.html">JavaScript - Web Document Interaction</a></p>
+</footer>
+</body>
+</html>

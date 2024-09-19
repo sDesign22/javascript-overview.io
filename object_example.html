@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <title>Javascript Overview (1.6. JS ObjectsGeneral Overview))</title>
+    <!-- External Style sheets -->
+    <link rel="stylesheet" type="text/css" href="CSS/reset.css">
+    <link rel="stylesheet" type="text/css" href="CSS/fonts.css">
+    <link rel="stylesheet" type="text/css" href="CSS/global_css.css">
+
+</head>
+<body>
+<h1>Javascript Overview</h1>
+<h2>By: Stefano DeRose</h2>
+<noscript><br/><em> This webpage will require JavaScript to be enabled (Enable Scripts in your
+    Browsers Options).</em></noscript>
+<div id="navigation">
+    <ul id="mainNav">
+        <li><a href="StefanoDeRose_JSFinal.html"
+               onClick="document.getElementById('sideNav-JWB').style.display = 'none';
+        document.getElementById('sideNav-JLF').style.display = 'block';">
+            JavaScript Language Fundamentals</a></li>
+        <li><a href="#"
+               onClick="document.getElementById('sideNav-JLF').style.display = 'none';
+        document.getElementById('sideNav-JWB').style.display = 'block'; return false">
+            JavaScript - Web Document Interaction </a></li>
+    </ul>
+</div>
+<div id="mainContent">
+    <div id="sideNav">
+        <ul id="sideNav-JLF" style="display: block;">
+            <li><a href="variables.html">1.1. Variables</a></li>
+            <li><a href="operators.html">1.2. Operators</a></li>
+            <li><a href="conditional.html">1.3. Conditional Statements (if, ...else if, switch)</a>
+            </li>
+            <li><a href="loops.html">1.4. Loops (for loops ands while loops)</a></li>
+            <li><a href="functions.html">1.5. Functions</a></li>
+            <li><a href="objects.html">1.6. JS Objects - General Overview</a></li>
+            <li><a href="built-in.html">1.7. JS Built-in Objects - Global, Statements, Numbers,
+                Date, Math</a></li>
+            <li><a href="arrays.html">1.8. Array Object</a></li>
+            <li><a href="strings.html">1.9. String Object</a></li>
+        </ul>
+        <ul id="sideNav-JWB" style="display: none;">
+            <li><a href="browser.html">2.1. Browser Objects</a></li>
+            <li><a href="web.html">2.2. HTML Objects</a></li>
+            <li><a href="events.html">2.3. Events</a></li>
+        </ul>
+    </div>
+    <div id="content" class="float-right">
+        <section class="nameDefinition">
+            <h3>1.6. JS ObjectsGeneral Overview Example</h3>
+        </section>
+        <p>
+            <script>
+                var anotherValueProperty = "From anotherValueProperty";
+                var anObject = {a:1, asName:"value2", aProperty:3, anotherValue:"Property", anotherVariable:anotherValueProperty};
+
+                function aFunctionObject(first, last, age, eye) {
+                this.firstName = first;
+                this.lastName = last;
+                this.age = age;
+                this.eyeColor = eye;
+                this.name = function() {
+                return this.firstName + " " + this.lastName
+                };
+                }
+
+                var myInfo = new aFunctionObject("Stefano", "DeRose", 33, "Hazel");
+                var someInfo = new aFunctionObject("Mary ", "LastName ", 32, "Blue ");
+
+                document.write("// This example shows Objects properties methods and how they work as well as be used in the code:" +
+                anObject + " anObject variable cannot display its values, to do this we loop: for (x in anObject) and display in{document.write(anObject[x] + \" \"):");
+                var x;
+                for (x in anObject) {
+                document.write(anObject[x] + " ");
+                }
+                document.write(" - // Each value is now displayed(each space). To use a property anObject.anotherVariable give us the property value: " + anObject.anotherVariable +
+                "<br/> // This example shows methods and properties used together correctly for some Information; aFunctionObject is created and two Object Variables as a new Object: var someInfo = new aFunctionObject(\"Mary\", \"LastName\", 32, \"Blue\") " +
+                "A function is assigned as a property method, now we can use this Objects function methods for data and to show. this.name = function() {return this.firstName + \" \" + this.lastName}; // is our method to combine names to make a full name, Function methods can be used for many data calculations/manipulations." +
+                "<br/>Accessing this methods shows: " + someInfo.name() + ", " + someInfo.age + ", " + someInfo.eyeColor + ". This shows our property data using our function method and helps us refer now two properties as one:by " + myInfo.name());
+            </script>
+        </p>
+    </div>
+
+    <section class="exampleCode">
+        <h4>Code Examples</h4>
+        <p id="variables" class="JScode" style="display:none">
+            var anotherValueProperty = "From anotherValueProperty";<br/>
+            var anObject = {a:1, asName:"value2", aProperty:3, anotherValue:"Property",
+            anotherVariable:anotherValueProperty};<br/>
+
+            function aFunctionObject(first, last, age, eye) {<br/>
+            this.firstName = first;<br/>
+            this.lastName = last;<br/>
+            this.age = age;<br/>
+            this.eyeColor = eye;<br/>
+            this.name = function() {<br/>
+            return this.firstName + " " + this.lastName<br/>
+            };<br/>
+            }<br/>
+
+            var myInfo = new aFunctionObject("Stefano", "DeRose", 33, "Hazel");<br/>
+            var someInfo = new aFunctionObject("Mary ", "LastName ", 32, "Blue ");<br/>
+
+            document.write("// This example shows Objects properties methods and how they work as
+            well as be used in the code:" + <br/>
+            anObject + " anObject variable cannot display its values, to do this we loop: for (x in
+            anObject) and display in{document.write(anObject[x] + \" \"):");<br/>
+            var x;<br/>
+            for (x in anObject) {<br/>
+            document.write(anObject[x] + " ");<br/>
+            }<br/>
+            document.write(" - // Each value is now displayed(each space). To use a property
+            anObject.anotherVariable give us the property value: " + anObject.anotherVariable +
+            <br/>
+            "<br/> // This example shows methods and properties used together correctly for some
+            Information; aFunctionObject is created and two Object Variables as a new Object: var
+            someInfo = new aFunctionObject(\"Mary\", \"LastName\", 32, \"Blue\") " +<br/>
+            "A function is assigned as a property method, now we can use this Objects function
+            methods for data and to show. this.name = function() {return this.firstName + \" \" +
+            this.lastName}; // is our method to combine names to make a full name, Function methods
+            can be used for many data calculations/manipulations." +<br/>
+            "<br/>Accessing this methods shows: " + someInfo.name() + ", " + someInfo.age + ", " +
+            someInfo.eyeColor + ". This shows our property data using our function method and helps
+            us refer now two properties as one:by " + myInfo.name());</p>
+        <script>
+            function myFunction() {
+            var x = document.getElementById("variables");
+            if (x.style.display === "none") {
+            x.style.display = "block"
+            } else {
+            x.style.display = "none";
+            }
+            }
+        </script>
+        <input type="button" value="Show/Hide" onclick="myFunction()">
+    </section>
+</div>
+<footer>
+    <p class="copyright float-left">&copy; Copyright 2020, Stefano De Rose</p>
+    <p class="breadcrumbs float-right text-align-R"><a href="StefanoDeRose_JSFinal.html">JavaScript
+        Language Fundamentals</a>
+        <br/><a href="browser.html">JavaScript - Web Browser - Web Document Interaction</a></p>
+</footer>
+</body>
+</html>

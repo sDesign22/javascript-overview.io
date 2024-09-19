@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>JavaScript Overview</title>
+    <!-- External Style sheets -->
+    <link rel="stylesheet" type="text/css" href="CSS/reset.css">
+    <link rel="stylesheet" type="text/css" href="CSS/fonts.css">
+    <link rel="stylesheet" type="text/css" href="CSS/global_css.css">
+</head>
+<body>
+<noscript>This website will require JavaScript to be enabled(Enable Scripts in your browsers
+    options).
+</noscript>
+
+<h1>Javascript Overview</h1>
+<h2>By: Stefano DeRose</h2>
+
+<div id="navigation">
+    <ul id="mainNav">
+        <li><a href="StefanoDeRose_JSFinal.html" onClick="document.getElementById('sideNav-JWB').style.display = 'none';
+	document.getElementById('sideNav-JLF').style.display = 'block';"> JavaScript Language
+            Fundamentals</a></li>
+        <li><a href="#" onClick="document.getElementById('sideNav-JLF').style.display = 'none';
+	document.getElementById('sideNav-JWB').style.display = 'block'; return false"> JavaScript - Web
+            Document Interaction</a></li>
+    </ul>
+</div>
+
+<div id="mainContent">
+    <div id="sideNav">
+        <ul id="sideNav-JLF" style="display: block;">
+            <li><a href="variables.html">1.1. Variables</a></li>
+            <li><a href="operators.html">1.2. Operators</a></li>
+            <li><a href="conditional.html">1.3. Conditional Statements (if, ...else if, switch)</a>
+            </li>
+            <li><a href="loops.html">1.4. Loops (for loops ands while loops)</a></li>
+            <li><a href="functions.html">1.5. Functions</a></li>
+            <li><a href="objects.html">1.6. JS Objects - General Overview</a></li>
+            <li><a href="built-in.html">1.7. JS Built-in Objects - Date, Math, Numbers, RegExp,
+                Global</a></li>
+            <li><a href="arrays.html">1.8. Array Object</a></li>
+            <li><a href="strings.html">1.9. String Object</a></li>
+        </ul>
+        <ul id="sideNav-JWB" style="display: none;">
+            <li><a href="browser.html">2.1. Browser Objects</a></li>
+            <li><a href="web.html">2.2. HTML Objects</a></li>
+            <li><a href="events.html">2.3. Events</a></li>
+        </ul>
+    </div>
+
+    <div id="content" class="float-right">
+        <section class="nameDefinition">
+            <h3>1.9 String Object</h3>
+            <p>Strings Consists of zero or more characters - You can use quotes inside a string, as
+                long as they don't match the quotes surrounding the string.</p>
+        </section>
+        <section class="generalSyntax">
+            <h4>String Object Syntax</h4>
+            <p class="JScode">Strings {Objects}; the keyword new - var firstName = new
+                String("John");</p>
+        </section>
+        <section class="properties">
+            <h4>String Object Properties</h4>
+            <p>constructor - Returns the string's constructor function.<br/>
+                length - Returns the length of a string.<br/>
+                prototype - Allows you to add properties and methods to an object.</p>
+        </section>
+        <section class="exampleCode">
+            <section class="methods">
+                <h4>String Object Methods</h4>
+                <p>charAt() - Returns the character at the specified index (position) -
+                    user-input<br/>
+                    charCodeAt() - Returns the Unicode of the character at the specified index
+                    myString.charCodeAt(0) - user-input<br/>
+                    concat() - Joins two or more strings, and returns a new joined strings<br/>
+                    endsWith() - Checks whether a string ends with specified string/characters<br/>
+                    fromCharCode() - Converts Unicode values to characters
+                <p class="JScode">myString = String.fromCharCode(65,66,67); - Converts</p>
+                includes() - Checks whether a string contains the specified string/characters<br/>
+                indexOf() - Returns the position of the first found occurrence of a specified value
+                in a string
+                <p class="JScode">myString2 = mySting1.indexOf("Hey"); - (regular expressions)
+                    Finding</p>
+                lastIndexOf() - Returns the position of the last found occurrence of a specified
+                value in a string
+                <p class="JScode">var pos = str.lastIndexOf("locate", 15); - Find String in Another
+                    String</p>
+                localeCompare() - Compares two strings in the current locale<br/>
+                match() - Searches a string for a match against a regular expression, and returns
+                the matches<br/>
+                repeat() - Returns a new string with a specified number of copies of an existing
+                string<br/>
+                replace() - Searches a string for a specified value, or regular expression; returns
+                a new string
+                <p class="JScode">var n = str.replace("Microsoft", "W3Schools"); - By default,
+                    replaces only first match</p>
+                search() - Searches string for specified value, or regular expression; returns
+                position of match<br/>
+                slice() - Extracts a part of a string and returns a new string
+                <p class="JScode">var res = str.slice(7, 13); - Extracting</p>
+                split() - Splits a string into an array of substrings - txt.split(","); // Split on
+                commas<br/>
+                startsWith() - Checks whether a string begins with specified characters<br/>
+                substr() - Extracts the characters from a string, beginning at a specified start
+                position, and through the specified number of character - Extracting/Copying<br/>
+                substring() - Extracts the characters from a string, between two specified indices
+                <p class="JScode">myString.substring(0, 4); - Extracting/Copying</p>
+                toLocaleLowerCase() - Converts a string to lowercase letters, according to the
+                host's locale<br/>
+                toLocaleUpperCase() - Converts a string to uppercase letters, according to the
+                host's locale<br/>
+                toLowerCase() - Converts a string to lowercase letters - var text2 =
+                text1.toLowerCase(); <br/>
+                toUpperCase() - Converts a string to uppercase letters - var text2 =
+                text1.toUpperCase(); <br/>
+                toString() - Returns the value of a String object - myVar.toString(); - can use to
+                output numbers from base 2 to base 36.<br/>
+                trim() - Removes whitespace from both ends of a string - can be used to correct user
+                input/text<br/>
+                valueOf() - Returns the primitive value of a String object </p>
+            </section>
+            <section class="exampleCode">
+
+                <h4>Code Examples</h4>
+
+                <p id="variables" class="JScode" style="display:none">
+
+                    var addVariable = 3 + 2;
+                    var subVariable = 3 - 2;
+                    var multiplyVariable = 2 * 2;
+                    var divideVariable = 2 / 2;
+
+                    document.write("This code displays working Operators, within each variable is an
+                    example and will be explained with comments //. <br/> First var addVariable = 3
+                    + 2 = " + addVariable + " // This adds the two integers" + "<br/>");
+                    document.write("var subVariable = 3 - 2 = " + subVariable + "// This subtracts
+                    the integers. " + "<br/>");
+                    document.write("var multiplyVariable = 2 * 2 = " + multiplyVariable + " // This
+                    multiples the integers. " + "<br/>");
+                    addVariable++;
+                    document.write("var divideVariable = 2 / 2; = " + divideVariable + " // This
+                    divides the integers. " + "<br/>" + addVariable + "// addVariable Incremented
+                    inside the code (addVariable++) and now is 6." + "<br/>");
+                    addVariable--
+                    document.write(addVariable + " // addVariable Decremented inside the code
+                    (addVariable--) and now is 5 again." + "<br/>" + " // each example has the
+                    Assignment operator; Here are some more Assignment Operator examples:" + "<br/>");
+                    addVariable += addVariable
+                    document.write(addVariable + " // addVariable Decremented inside the code
+                    (addVariable--) and now is 5 again." + "<br/>" + " // each example has the
+                    Assignment operator; Here are some more Assignment Operator examples:" + "<br/>");
+                    addVariable /= 10
+                    document.write(addVariable + " // addVariable Decremented inside the code
+                    (addVariable--) and now is 5 again." + "<br/>" + " // each example has the
+                    Assignment operator; Here are some more Assignment Operator examples:" + "<br/>");
+                    addVariable %= 2
+                    document.write(multiplyVariable + " // addVariable Decremented inside the code
+                    (addVariable--) and now is 5 again." + "<br/>" + " // The Logical operators are
+                    within Statements and Loops subsections, this is to really show their full
+                    potential in Control Flow." + "<br/>");;</p>
+
+                <script>
+                    function myFunction() {
+                    var x = document.getElementById("variables");
+                    if (x.style.display === "none") {
+                    x.style.display = "block"
+                    } else {
+                    x.style.display = "none";
+                    }
+                    }
+                </script>
+                <p>Code Examples: <input type="button" value="Show/Hide" onclick="myFunction()"> ;
+                    or for a working Code Link: <a href="string_example.html">Click Here</a></p>
+
+            </section>
+    </div>
+</div>
+
+<footer>
+    <p class="copyright float-left">&copy; Copyright 2020, Stefano De Rose <br/> References: <a
+            href="https://www.w3schools.com/jsref/jsref_obj_string.asp">https://www.w3schools.com/jsref/jsref_obj_string.asp</a>
+    </p>
+    <p class="breadcrumbs float-right text-align-R"><a href="StefanoDeRose_JSFinal.html">JavaScript
+        Language Fundamentals</a>
+        <br/><a href="browser.html">JavaScript - Web Document Interaction</a></p>
+</footer>
+</body>
+</html>

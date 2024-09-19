@@ -1,0 +1,118 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>JavaScript Overview</title>
+    <!-- External Style sheets -->
+    <link rel="stylesheet" type="text/css" href="CSS/reset.css">
+    <link rel="stylesheet" type="text/css" href="CSS/fonts.css">
+    <link rel="stylesheet" type="text/css" href="CSS/global_css.css">
+</head>
+<body>
+
+<h1>Javascript Overview (Demo)</h1>
+<h2>By: Stefano DeRose</h2>
+<noscript><br/><em> This webpage will require JavaScript to be enabled (Enable Scripts in your
+    Browsers Options).</em></noscript>
+<div id="navigation">
+    <ul id="mainNav">
+        <li><a href="StefanoDeRose_JSFinal.html" onClick="document.getElementById('sideNav-JWB').style.display = 'none';
+	document.getElementById('sideNav-JLF').style.display = 'block';"> JavaScript Language
+            Fundamentals</a></li>
+        <li><a href="#" onClick="document.getElementById('sideNav-JLF').style.display = 'none';
+	document.getElementById('sideNav-JWB').style.display = 'block'; return false"> JavaScript - Web
+            Document Interaction</a></li>
+    </ul>
+</div>
+
+<div id="mainContent">
+    <div id="sideNav">
+        <ul id="sideNav-JLF" style="display: block;">
+            <li><a href="variables.html">1.1. Variables</a></li>
+            <li><a href="operators.html">1.2. Operators</a></li>
+            <li><a href="conditional.html">1.3. Conditional Statements (if, ...else if, switch)</a>
+            </li>
+            <li><a href="loops.html">1.4. Loops (for loops ands while loops)</a></li>
+            <li><a href="functions.html">1.5. Functions</a></li>
+            <li><a href="objects.html">1.6. JS Objects - General Overview</a></li>
+            <li><a href="built-in.html">1.7. JS Built-in Objects - Global, Statements, Numbers,
+                Date, Math</a></li>
+            <li><a href="arrays.html">1.8. Array Object</a></li>
+            <li><a href="strings.html">1.9. String Object</a></li>
+        </ul>
+        <ul id="sideNav-JWB" style="display: none;">
+            <li><a href="browser.html">2.1. Browser Objects</a></li>
+            <li><a href="web.html">2.2. HTML Objects</a></li>
+            <li><a href="events.html">2.3. Events</a></li>
+        </ul>
+    </div>
+
+    <div id="content" class="float-right">
+        <section class="nameDefinition">
+            <h3>JavaScript Overview</h3>
+            <p>This JavaScript overview outlines almost every base aspect of Javascript; it
+                contains all the fundamentals of the JavaScript programming language and with each
+                subsection one can easily and quickly learn Javascript.</p>
+        </section>
+        <section class="generalSyntax">
+            <h4>JavaScript Syntax: &ltscript&gt</h4>
+            <p>JavaScript syntax is a correctly defined code; here is the basis for Javascript and
+                its Syntax.
+                The Script tag is an HTML Element, for a Complete look at &ltscript&gt see:<a
+                        href="https://www.w3schools.com/tags/tag_script.asp">
+                    https://www.w3schools.com/tags/tag_script.asp</a></p>
+            <p class="JScode"> The following is written with Javascript code:<br/>
+                <script>
+                    document.write("<b>Script Element:</b> &ltscript&gt Script Block; &lt/script&gt - The main Javascript Element called the Script Element defines Javascript Code (Script Block), and all Script must be inside these script tags."
+                        + "<br/><b>No Script Element:</b> &ltnoscript&gt Tags define an alternate code (content) for users that have disabled scripts in their browser or a browser that doesn't support scripts. &lt/noscript&gt");
+                </script>
+            </p>
+            <p>All code above displayed using - document.write(&quotWith text written in
+                quotations&quot)<br/>
+                <b>Paragraph Id Tag:</b> &ltp id=&quotidName&quot&gtText Here &lt/p&gt - Also can
+                display text in JavaScript (written inside tags).<br/>
+                <b>JavaScript Print:</b> This can print content of the current window using -
+                window.print( ).
+                <br/><b>UniCode Character Set:</b> JavaScript uses the Unicode character set, it
+                covers almost every character, punctuation and symbol in the world. Some characters
+                cannot be recognized in the JavaScript code correctly, by using the unicode charset
+                one can display certain characters properly in text; using an <b>&</b> in front of
+                each sequence: nbsp - Space, lt - <, gt - >. For a complete look at the Unicode
+                character set see: <a href="https://www.w3schools.com/charsets/ref_html_utf8.asp">https://www.w3schools.com/charsets/ref_html_utf8.asp</a>
+            </p>
+            <h4>Basic JavaScript Terms</h4>
+            <p><b>Hoisting:</b> JavaScripts default behavior of moving all declarations to top of
+                current scope(script/function); declare variables at the beginning of script.<br/>
+                <b>Identifiers:</b> Used to name Variables (Keywords, Functions, Labels).<br/>
+                <b>Parameter:</b> Objects data properties or values.<br/>
+                <b>Literals:</b> Actual data rather then from a calculation or variable.<br/>
+                <b>Expression:</b> Values, Variables and Operators; witch computes to a value.<br/>
+                <b>Statements:</b> A JavaScript program is a list of statements to be executed by a
+                computer, often called code. Statements are separated with a semicolon; Often start
+                with keyword to identify action to be performed. <i>Programmers like to avoid code
+                    lines(statements) more than 80 characters, best place to break is after an
+                    operator</i><br/>
+                <b>Parsing:</b> JavaScript interpreter works from left to right; like reading.<br/>
+                <b>Comments:</b> // - Used to leave comments inside of the Script Code not displayed
+                (for programming use). Also used to prevent execution, any text between // and the
+                end of the line will not be executed; <b>Multi-line Comments:</b> start with /* and
+                end with */.<br/>
+                <b>Data types:</b> JavaScript uses [String, Number, Boolean, Undefined, Function,
+                Object, Arrays] <b>Data type Conversions:</b> Can Convert data types from one to
+                another.<br/>
+                <b>External Link:</b> Using the Script element through src attribute - &ltscript
+                src="aScriptFile.js"&gt; Can source external files for use in Script. Used for
+                JavaScripts Maintainability, Browser Speed and Compatibility, usually ends with .js.<br/>
+                <b>Debugging:</b> The process of searching code to locate a source of trouble.<br/>
+            </p>
+    </div>
+</div>
+<footer>
+    <p class="copyright float-left">&copy; Copyright 2020, Stefano De Rose <br/>References: <a
+            href="https://www.w3schools.com/js/js_whereto.asp">https://www.w3schools.com/js/js_whereto.asp</a>
+    </p>
+    <p class="breadcrumbs float-right text-align-R"><a href="StefanoDeRose_JSFinal.html">JavaScript
+        Language Fundamentals</a>
+        <br/><a href="browser.html">JavaScript - Web Document Interaction</a></p>
+</footer>
+</body>
+</html>

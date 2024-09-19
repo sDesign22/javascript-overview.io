@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <title>Javascript Overview (2.3 Events)</title>
+    <!-- External Style sheets -->
+    <link rel="stylesheet" type="text/css" href="CSS/reset.css">
+    <link rel="stylesheet" type="text/css" href="CSS/fonts.css">
+    <link rel="stylesheet" type="text/css" href="CSS/global_css.css">
+
+</head>
+<body>
+<h1>Javascript Overview</h1>
+<h2>By: Stefano DeRose</h2>
+
+<div id="navigation">
+    <ul id="mainNav">
+        <li><a href="StefanoDeRose_JSFinal.html"
+               onClick="document.getElementById('sideNav-JWB').style.display = 'none';
+        document.getElementById('sideNav-JLF').style.display = 'block';">
+            JavaScript Language Fundamentals</a></li>
+        <li><a href="#"
+               onClick="document.getElementById('sideNav-JLF').style.display = 'none';
+        document.getElementById('sideNav-JWB').style.display = 'block'; return false">
+            JavaScript - Web Document Interaction </a></li>
+    </ul>
+</div>
+<div id="mainContent">
+    <div id="sideNav">
+        <ul id="sideNav-JLF" style="display: block;">
+            <li><a href="browser.html">2.1. Browser Objects</a></li>
+            <li><a href="web.html">2.2. HTML Objects</a></li>
+            <li><a href="events.html">2.3. Events</a></li>
+        </ul>
+        <ul id="sideNav-JWB" style="display: none;">
+            <li><a href="variables.html">1.1. Variables</a></li>
+            <li><a href="operators.html">1.2. Operators</a></li>
+            <li><a href="conditional.html">1.3. Conditional Statements (if - else if , switch)</a>
+            </li>
+            <li><a href="loops.html">1.4. Loops (for loop + your choice of another loop)</a></li>
+            <li><a href="functions.html">1.5. Functions</a></li>
+            <li><a href="objects.html">1.6. JS Objects - General Overview</a></li>
+            <li><a href="built-in.html">1.7. JS Built-in Objects - A List of at least 5 built-in JS
+                objects</a></li>
+            <li><a href="arrays.html">1.8. Array Object (in detail)</a></li>
+            <li><a href="strings.html">1.9. String Object (in detail)</a></li>
+        </ul>
+    </div>
+</div>
+
+<div id="content" class="float-right">
+    <section class="nameDefinition">
+        <h3>2.3 Events </h3>
+        <p> Events - something that happens in the page [ if expected something happens and can
+            respond/ ] something causes-EVENT </p>
+    </section>
+    <section class="generalSyntax">
+        <h4>Events Syntax</h4>
+        <p> load event - raises(fires) a notification when page is completely loaded in browser -
+            unload event
+            Must intercept events; event handler (listener) -" connecting code to event" -to preform
+            task/event -JavaScript primarily event driven-most common user event is mouse events
+            event handler inside
+            <body> tags -
+            <body onload="myOnLOadfunction()" onunload="myOnUnloadFunction()">
+            events: mouse, keyboard, progression, form, mutation, touch, error
+            Connecting Code to Events - [use of objects/events} - 3-Ways: Assigning HTML Attributes,
+            Assigning Objects special properties, Calling Objects special Methods
+            Handling events via HTML attributes: [click Event fires when clicked] - <a
+                    href="somepage.html">Click Me</a> clickme/onclick
+            target property - target of the event
+            handling events via object properties - document.getElementById() Method - linkClick()
+
+            Standard Event Model - addEventListener() - removeEventListener() - API - application
+            programming interface
+
+            HTML Forms - client side processing information within the browser of grouping HTML
+            interaction elements,
+            <form> - start and end form; number of attributes(action)
+                <form name="myForm"></form>
+                - create HTML Form Element Object - Can Access in two Ways: Name- document.myForm,
+                document Objects form collective property
+        </p>
+        <p class="JScode">var nameExample; // Now an Identified variable called nameExample; it
+            value is undefined(no assigned value).</p>
+    </section>
+    <section class="properties">
+        <h4>Events Properties</h4>
+        <p>onchange - An HTML element has been changed
+            onclick - The user clicks an HTML element
+            onmouseover - The user moves the mouse over an HTML element
+            onmouseout - The user moves the mouse away from an HTML element
+            onkeydown - The user pushes a keyboard key
+            onload - The browser has finished loading the page
+            Keep the number of elements in the HTML DOM small. This will always improve page
+            loading, and speed up rendering (page display), especially on smaller devices.
+        </p>
+        <p class="JScode"> var nameExample, nameExample1, a, AnotherVariable; // This creates
+            several different Variables, the var keyword is used only once for creating multiple
+            Variables. </p>
+    </section>
+    <section class="methods">
+        <h4>Events Methods</h4>
+        <p>Description
+            document.getElementById(id)
+            Find an element by element id
+            document.getElementsByTagName(name)
+            Find elements by tag name
+            document.getElementsByClassName(name)
+            Find elements by class name
+            querySelector() method returns the first child element that matches a specified CSS
+            selector(s) of an element.
+            The querySelectorAll() method returns a collection of an element's child elements that
+            match a specified CSS selector(s), as a static NodeList object.</p>
+        <p class="JScode"> var nameExample, nameExample1, a, AnotherVariable; // This creates
+            several different Variables, the var keyword is used only once for creating multiple
+            Variables. </p>
+        document.createElement(element)
+        Create an HTML element
+        document.removeChild(element)
+        Remove an HTML element
+        document.appendChild(element)
+        Add an HTML element
+        document.replaceChild(new, old)
+        Replace an HTML element
+        document.write(text)
+        Write into the HTML output stream
+        Adding Events Handlers
+
+        document.getElementById(id).onclick = function(){code}
+        Adding event handler code to an onclick event
+        <br/>
+        document Object: Gain access to html elements and their properties and methods inside your
+        page.
+        Properties[Array like] - called Collections: forms, images, links[all array - of all
+        elements represented by object in page]
+        Using document object: Properties and Methods: write(), bgColor - screen color depth[number
+        of colors a users screen supports ex2]
+        images Collection: <img alt="USA" name="myImage" src="usa.gif"/>
+        First image stored images[0]: var myImage2 = document.images[1];
+        links Collection: For each hyper-link element <a/> with href attribute, the browser creates
+        an Object
+    </section>
+
+    <section class="exampleCode">
+
+        <h4>Code Examples</h4>
+
+        <p id="variables" class="JScode" style="display:none">
+
+            var addVariable = 3 + 2;
+            var subVariable = 3 - 2;
+            var multiplyVariable = 2 * 2;
+            var divideVariable = 2 / 2;
+
+            document.write("This code displays working Operators, within each variable is an example
+            and will be explained with comments //. <br/> First var addVariable = 3 + 2 = " +
+            addVariable + " // This adds the two integers" + "<br/>");
+            document.write("var subVariable = 3 - 2 = " + subVariable + "// This subtracts the
+            integers. " + "<br/>");
+            document.write("var multiplyVariable = 2 * 2 = " + multiplyVariable + " // This
+            multiples the integers. " + "<br/>");
+            addVariable++;
+            document.write("var divideVariable = 2 / 2; = " + divideVariable + " // This divides the
+            integers. " + "<br/>" + addVariable + "// addVariable Incremented inside the code
+            (addVariable++) and now is 6." + "<br/>");
+            addVariable--
+            document.write(addVariable + " // addVariable Decremented inside the code
+            (addVariable--) and now is 5 again." + "<br/>" + " // each example has the Assignment
+            operator; Here are some more Assignment Operator examples:" + "<br/>");
+            addVariable += addVariable
+            document.write(addVariable + " // addVariable Decremented inside the code
+            (addVariable--) and now is 5 again." + "<br/>" + " // each example has the Assignment
+            operator; Here are some more Assignment Operator examples:" + "<br/>");
+            addVariable /= 10
+            document.write(addVariable + " // addVariable Decremented inside the code
+            (addVariable--) and now is 5 again." + "<br/>" + " // each example has the Assignment
+            operator; Here are some more Assignment Operator examples:" + "<br/>");
+            addVariable %= 2
+            document.write(multiplyVariable + " // addVariable Decremented inside the code
+            (addVariable--) and now is 5 again." + "<br/>" + " // The Logical operators are within
+            Statements and Loops subsections, this is to really show their full potential in Control
+            Flow." + "<br/>");;</p>
+
+        <script>
+            function myFunction() {
+            var x = document.getElementById("variables");
+            if (x.style.display === "none") {
+            x.style.display = "block"
+            } else {
+            x.style.display = "none";
+            }
+            }
+        </script>
+        <p>Code Examples: <input type="button" value="Show/Hide" onclick="myFunction()"> ; or for a
+            working Code Link: <a href="events_example.html">Click Here</a></p>
+
+    </section>
+</div>
+
+<footer>
+    <p class="copyright float-left">&copy; Copyright 2020, Stefano De Rose <br/> References: <a
+            href="https://www.w3schools.com/jsref/dom_obj_event.asp">https://www.w3schools.com/jsref/dom_obj_event.asp</a>
+    </p>
+    <p class="breadcrumbs float-right text-align-R"><a href="StefanoDeRose_JSFinal.html">JavaScript
+        Language Fundamentals</a>
+        <br/><a href="browser.html">JavaScript - Web Document Interaction</a></p>
+</footer>
+</body>
+</html>

@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>JavaScript Overview</title>
+    <!-- External Style sheets -->
+    <link rel="stylesheet" type="text/css" href="CSS/reset.css">
+    <link rel="stylesheet" type="text/css" href="CSS/fonts.css">
+    <link rel="stylesheet" type="text/css" href="CSS/global_css.css">
+</head>
+<body>
+
+<h1>Javascript Overview</h1>
+<h2>By: Stefano DeRose</h2>
+
+<div id="navigation">
+    <ul id="mainNav">
+        <li><a href="StefanoDeRose_JSFinal.html" onClick="document.getElementById('sideNav-JWB').style.display = 'none';
+	document.getElementById('sideNav-JLF').style.display = 'block';"> JavaScript Language
+            Fundamentals</a></li>
+        <li><a href="#" onClick="document.getElementById('sideNav-JLF').style.display = 'none';
+	document.getElementById('sideNav-JWB').style.display = 'block'; return false"> JavaScript - Web
+            Document Interaction</a></li>
+    </ul>
+</div>
+<div id="mainContent">
+    <div id="sideNav">
+        <ul id="sideNav-JLF" style="display: block;">
+            <li><a href="variables.html">1.1. Variables</a></li>
+            <li><a href="operators.html">1.2. Operators</a></li>
+            <li><a href="conditional.html">1.3. Conditional Statements (if, ...else if, switch)</a>
+            </li>
+            <li><a href="loops.html">1.4. Loops (for loops ands while loops)</a></li>
+            <li><a href="functions.html">1.5. Functions</a></li>
+            <li><a href="objects.html">1.6. JS Objects - General Overview</a></li>
+            <li><a href="built-in.html">1.7. JS Built-in Objects - Global, Statements, Numbers,
+                Date, Math</a></li>
+            <li><a href="arrays.html">1.8. Array Object</a></li>
+            <li><a href="strings.html">1.9. String Object</a></li>
+        </ul>
+        <ul id="sideNav-JWB" style="display: none;">
+            <li><a href="browser.html">2.1. Browser Objects</a></li>
+            <li><a href="web.html">2.2. HTML Objects</a></li>
+            <li><a href="events.html">2.3. Events</a></li>
+        </ul>
+    </div>
+
+    <div id="content" class="float-right">
+        <section class="nameDefinition">
+            <h3>1.7 JS Built-in Objects: Global, Statements, Numbers, Date, Math</h3>
+            <p>Built-in objects: Have pre-defined methods and properties, supplied by
+                JavaScript/Browser environment.</p>
+        </section>
+
+        <h4>Global Objects</h4>
+        <p>Global Objects act on a global scope of script, its properties and functions can be used
+            with all built-in Objects.</p>
+        <section class="methods">
+            <h5>Global Object Methods/Properties</h5>
+            <p><b>JavaScript Global Properties</b><br/>
+            <p class="JScode">Infinity - A numeric value that represents positive/negative
+                infinity.</br>NaN - "Not-a-Number" value.<br/>undefined - Indicates that a variable
+                has not been assigned a value.</p>
+            <b>JavaScript Global Functions/Methods</b><br/>
+            <p class="JScode">decodeURI() - Decodes a URI.<br/>
+                decodeURIComponent() - Decodes a URI component.<br/>encodeURI() - Encodes a
+                URI.<br/>encodeURIComponent() - Encodes a URI component.<br/>escape() - Deprecated
+                in version 1.5. Use encodeURI() or encodeURIComponent() instead.<br/>
+                eval() - Evaluates a string and executes it as if it was script code.<br/>isFinite()
+                - Determines whether a value is a finite, legal number.<br/>isNaN() - Determines
+                whether a value is an illegal number.<br/>
+                Number() - Converts an object's value to a number.<br/>parseFloat() - Parses a
+                string and returns a floating point number.<br/>parseInt() - Parses a string and
+                returns an integer.<br/>
+                String() - Converts an object's value to a string.<br/>unescape() - Deprecated in
+                version 1.5. Use decodeURI() or decodeURIComponent() instead.</p>
+            <p>A browsers global object is the browser window. isNaN() is a window method:
+                window.isNaN().</p>
+        </section>
+
+        <h4>Statement Objects</h4>
+        <p>Statement identifier(Keyword) is used to identify the action to be performed; they are
+            instructions that will execute. Its syntax properties and methods are all together as
+            the Statement Identifier.</p>
+        <section class="methods">
+            <p class="JScode">break - Exits a switch or a loop.<br/>const - Declares a variable with
+                a constant value.<br/>class - Declares a class.<br/>continue - Breaks one iteration
+                (in the loop) if a specified condition occurs, and continues with the next iteration
+                in the loop.<br/>
+                debugger - Stops the execution of JavaScript, and calls (if available) the debugging
+                function.<br/>do ... while - Executes a block of statements and repeats the block
+                while a condition is true.<br/>
+                for - Loops through a block of code a number of times.<br/>for ... in - Loops
+                through the properties of an object.<br/>for ... of - Loops through the values of an
+                iterable object.<br/>
+                function - Declares a function.<br/>if ... else ... else if - Marks a block of
+                statements to be executed depending on a condition.<br/>let - Declares a variable
+                inside brackets {} scope.<br/>
+                return - Stops the execution of a function and returns a value from that
+                function.<br/>switch - Marks a block of statements to be executed depending on
+                different cases.<br/>
+                throw - Throws (generates) an error.<br/>try ... catch ... finally - Marks the block
+                of statements to be executed when an error occurs in a try block, and implements
+                error handling.<br/>
+                var - Declares a variable.<br/>while - Marks a block of statements to be executed
+                while a condition is true</p>
+        </section>
+
+        <h4>Number Objects</h4>
+        <p>Numbers Can be Objects with the new keyword; JavaScript has only one type of
+            number(with/without decimals):</p>
+        <section class="generalSyntax">
+            <h5>Number Objects Syntax</h5>
+            <p>Define/Create: new: Keyword - Followed by an object Constructor().</p>
+            <p class="JScode">var y = new Number(123);</p>
+        </section>
+        <section class="properties">
+            <h5>Number Objects Properties</h5>
+            <p class="JScode">MAX_VALUE - Returns the function that created JavaScript's Number
+                prototype.<br/>MIN_VALUE - Returns the largest number possible in JavaScript.<br/>
+                POSITIVE_INFINITY - Represents infinity (returned on overflow).<br/>NEGATIVE_INFINITY
+                - Returns the smallest number possible in JavaScript.<br/>
+                NaN - Not-a-Number[value] - Represents negative infinity (returned on overflow).</p>
+        </section>
+        <section class="methods">
+            <h5>Number Objects Methods</h5>
+            <p class="JScode">Number Methods can be used on any type of Numbers (literals,
+                variables, or expressions).<br/>
+                isFinite() - Checks whether a value is a finite number.<br/>isInteger() - Checks
+                whether a value is an integer.<br/>isNaN() {NaN} - Checks whether a value is Number.<br/>
+                isSafeInteger() - Checks whether a value is a safe integer.<br/>toExponential(x) -
+                Converts a number into an exponential notation.<br/>toFixed(x) - Formats a number
+                with x numbers of digits after the decimal point.<br/>
+                toLocaleString() - Converts a number into a string, based on the locale
+                settings.<br/>toPrecision(x) - Formats a number to x length.<br/>toString() -
+                Converts a number to a string.<br/>
+                valueOf() - Returns the primitive value of a number.</p>
+        </section>
+
+        <h4>Date Objects</h4>
+        <p>Date Object handles everything to do with date and time; can find the date and time,
+            store dates and times, do calculations or convert these dates into strings.</p>
+        <section class="generalSyntax">
+            <h5>Date Syntax</h5>
+            <p>4-Ways to declare: (24-hour clock - Jan:0 - Dec:11)
+                <br/>1. new Date()<br/>2. new Date(year, month, day, hours, minutes, seconds,
+                milliseconds)<br/>3. new Date(milliseconds)<br/>4. new Date(date string) </p>
+            <p class="JScode">var d = new Date(); // creates current date
+                (year,month,day,hours,minutes,second,milliseconds).</p>
+        </section>
+        <section class="methods">
+            <h5>Date Methods</h5>
+            <p>Getting Date Values - get Methods; can get() - year, month, day, hours, minutes,
+                seconds, milliseconds</p>
+            <p class="JScode">getFullYear() - Get the year as a four digit number (yyyy).<br/>
+                getMonth() - Get the month as a number (0-11).<br/>getDate() - Get the day as a
+                number (1-31).
+                <br/>getHours() - Get the hour (0-23).
+                <br/> getTime() - Get the time (milliseconds since January 1, 1970)<br/> getDay() -
+                Get the weekday as a number (0-6).</p>
+            <p>Setting Date Values - set Methods; can set() - year, month, day, hours, minutes,
+                seconds, milliseconds</p>
+            <p class="JScode">setDate() - Set the day as a number (1-31).<br/>setFullYear() - Set
+                the year (optionally month and day).<br/>setHours() - Set the hour (0-23).<br/>
+                setMonth() - Set the month (0-11).<br/> setTime() - Set the time (milliseconds since
+                January 1, 1970).</p>
+            <p>UTC Date Methods - For working with UTC dates(Universal Time Zone dates); Similar
+                Methods.</p>
+            <p class="JScode">setUTCDate() - method sets the day of the month, according to the UTC
+                time.<br/> getUTCDate() - Method returns day of month (from 1 to 31) of the date
+                object; universal time.
+                <b>Displaying Dates:</b><br/>
+            <p class="JScode">toUTCString() - Method converts a date to a UTC string (a date display
+                standard).<br/>
+                toTimeString() - Converts the time portion of a Date object to a string.<br/>toDateString()
+                - Method converts a date to a more readable format.<br/>
+                toLocaleString() - Converts a Date object to a string, using locale
+                conventions.<br/>
+                toLocaleDateString()/toLocaleTimeString() - Returns the date/time portion of a Date
+                object as a string, using locale conventions.</p>
+        </section>
+
+        <h4>Math Object.</h4>
+        <p>The JavaScript Math object allows you to perform mathematical tasks on numbers. Provides
+            Number of Mathematical Functions, and Number Manipulation Methods. </p>
+        <section class="properties">
+            <h5>Math Object Properties</h5>
+            <p class="JScode"> E - Returns Euler's number (approx. 2.718)<br/>LN2 - Returns the
+                natural logarithm of 2 (approx. 0.693)<br/>LN10 - Returns the natural logarithm of
+                10 (approx. 2.302)<br/>
+                LOG2E - Returns the base-2 logarithm of E (approx. 1.442)<br/>LOG10E - Returns the
+                base-10 logarithm of E (approx. 0.434)<br/>PI - Returns PI (approx. 3.14)<br/>
+                SQRT1_2 - Returns the square root of 1/2 (approx. 0.707)<br/>SQRT2 - Returns the
+                square root of 2 (approx. 1.414)</p>
+        </section>
+        <section class="methods">
+            <h5>Math Object Methods</h5>
+            <p class="JScode">abs(x) - Returns the absolute value of x.<br/>acos(x) - Returns the
+                arc-cosine of x, in radians. <br/>asin(x) - Returns the arc-sine of x, in radians.
+                <br/>
+                atan(x) - Returns the arc-tangent of x as a numeric value between -PI/2 and PI/2
+                radians.<br/>atan2(y, x) - Returns the arc-tangent of the quotient of its arguments.<br/>
+                ceil(x) - Returns the value of x rounded up to its nearest integer.<br/>cos(x) -
+                Returns the cosine of x (x is in radians).<br/>exp(x) - Returns the value of
+                Ex.<br/>
+                floor(x) - Returns the value of x rounded down to its nearest integer.<br/>log(x) -
+                Returns the natural logarithm (base E) of x.<br/>max(x, y, z, ..., n) - Returns the
+                number with the highest value.<br/>
+                min(x, y, z, ..., n) - Returns the number with the lowest value.<br/>pow(x, y) -
+                Returns the value of x to the power of y.<br/>random() - Returns a random number
+                between 0 and 1.<br/>
+                round(x) - Returns the value of x rounded to its nearest integer.<br/>sin(x) -
+                Returns the sine of x (x is in radians).<br/>sqrt(x) - Returns the square root of x.<br/>
+                tan(x) - Returns the tangent of an angle.</p>
+        </section>
+
+        <section class="exampleCode">
+            <h4>Code Examples</h4>
+            <p id="variables" class="JScode" style="display:none">
+
+                var aPrecision = 20.998;<br/>
+                var aDate = new Date();<br/>
+                var aDate1 = new Date();<br/>
+
+                document.write("// Built-in objects examples are listed here there are several
+                examples so per Object discuss we will show the common or base
+                uses:<br/><b>Global</b><br/>" + "// eval(4 * 4) evaluates an expression an outputs a
+                result: " + <br/>
+                eval(4 * 4) + "; This displays the result, and can evaluate many different
+                expressions.<br/>Statements have been shown as well as its base uses.");<br/>
+                document.write("<br/><b>Numbers</b><br/>// isNaN() - determines whether a value is
+                Not A Number: " + isNaN(34) + "; isNaN(34) is a number. INaN(\"Hello\") is: " +
+                isNaN("Hello") + <br/>
+                " because \"Hello\" is NaN.<br/>Number() - Converts a non-numeric value into a
+                number; \"90\" is a string value: " + Number("90") + " is now a numeric value.
+                parseInt() does this same function.")<br/>
+                document.write("<br/>// parseFloat(\"10.99\") - Returns a floating point integer;
+                from a string value as \"10.99\" now is: " + parseFloat("10.99") + <br/>
+                ". These methods only take the first value from a string parseFloat(\"10.99 11.99
+                12.99\") returns: " + parseFloat("10.99 11.99 12.99") + "<br/>// String()
+                returns(converts) a numeric value as a string value: " + String(409.99) + "; is now
+                a string type.");<br/>
+                document.write("<br/>// toLocaleString() - Also converts numeric values to string;
+                using local language formats: " + Number(99999).toLocaleString("en-CA") + ".
+                Number(99999).toLocaleString(\"en-CA\") shows us a local string format." + "<br/>//
+                toPrecision() - Returns a number to precision we can see this in our Variable; its
+                value is: " + aPrecision +<br/>
+                ". Using toPrecision() we can not only round the number, but make a precision
+                decimal place number; using aPrecision.toPrecision(4) its value is: " +
+                aPrecision.toPrecision(4));<br/>
+                aDate1.setFullYear(2018)<br/>
+                document.write("<br/><b>Date</b><br/>// new Date() - Shows the full current date: "
+                + new Date() + ". We can also getMonth() from new Date as Date.getMonth(): " +
+                aDate.getMonth() + ". Date.getDate() shows day of the month: " + aDate.getDate() +
+                ". Date.getHours(): " + aDate.getHours() + ". Date.getMinutes(): " +
+                aDate.getMinutes() + ". Date.getSeconds(): " + aDate.getSeconds() + <br/>
+                "<br/>These methods can also get the UTC Time; Date.getUTCDate(): " +
+                aDate.getUTCDate() + "<br/> Or methods can set dates like a full year as
+                Date.setFullYear(2018): " + aDate1 + ". toDateString() - " +
+                aDate.toDateString());<br/>
+                document.write("<br/><b>Math</b><br/>// Math.ceil(2.41) - this will return: " +
+                Math.ceil(2.41) + " Were as Math.floor(4.99) will return : " + Math.floor(4.99) + ".<br/>
+                Math.cos(5) - Will return the cosine of this number: " + Math.cos(5) + ".
+                Math.sin(5) the sine: " + Math.sin(5) + ". Or Math.tan(5) the tangent: " +
+                Math.tan(5) + "<br/> // Math.min(1, 2, 5, 10, 20); returns the lowest numeric value:
+                " + Math.min(1, 2, 5, 10, 20) + <br/>
+                ". Math.max(1, 2, 5, 10, 20) returns the largest value: " + Math.max(1, 2, 5, 10,
+                20) + ". Math.pow(2, 4) will return 2 to the power of 4: " + Math.pow(2, 4) + ".
+                Math.sqrt(8) will return the square root of 8: " + Math.sqrt(8) + ". Using
+                Math.round(2.8284271247461903) we can round this number: " +
+                Math.round(2.8284271247461903))</p>
+            <script>
+                function myFunction() {
+                var x = document.getElementById("variables");
+                if (x.style.display === "none") {
+                x.style.display = "block"
+                } else {
+                x.style.display = "none";
+                }
+                }
+            </script>
+            <p>Code Examples: <input type="button" value="Show/Hide" onclick="myFunction()"> ; or
+                for a working Code Link: <a href="built-in_example.html">Click Here</a></p>
+        </section>
+    </div>
+</div>
+
+<footer>
+    <p class="copyright float-left">&copy; Copyright 2020, Stefano De Rose <br/> References: <a
+            href="https://www.w3schools.com/jsref/default.asp">https://www.w3schools.com/jsref/default.asp</a>
+    </p>
+    <p class="breadcrumbs float-right text-align-R"><a href="StefanoDeRose_JSFinal.html">JavaScript
+        Language Fundamentals</a>
+        <br/><a href="browser.html">JavaScript - Web Document Interaction</a></p>
+</footer>
+</body>
+</html>

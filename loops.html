@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>JavaScript Overview</title>
+    <!-- External Style sheets -->
+    <link rel="stylesheet" type="text/css" href="CSS/reset.css">
+    <link rel="stylesheet" type="text/css" href="CSS/fonts.css">
+    <link rel="stylesheet" type="text/css" href="CSS/global_css.css">
+</head>
+<body>
+<noscript>This website will require JavaScript to be enabled(Enable Scripts in your browsers
+    options).
+</noscript>
+
+<h1>Javascript Overview</h1>
+<h2>By: Stefano DeRose</h2>
+
+<div id="navigation">
+    <ul id="mainNav">
+        <li><a href="StefanoDeRose_JSFinal.html" onClick="document.getElementById('sideNav-JWB').style.display = 'none';
+	document.getElementById('sideNav-JLF').style.display = 'block';"> JavaScript Language
+            Fundamentals</a></li>
+        <li><a href="#" onClick="document.getElementById('sideNav-JLF').style.display = 'none';
+	document.getElementById('sideNav-JWB').style.display = 'block'; return false"> JavaScript - Web
+            Document Interaction</a></li>
+    </ul>
+</div>
+
+<div id="mainContent">
+    <div id="sideNav">
+        <ul id="sideNav-JLF" style="display: block;">
+            <li><a href="variables.html">1.1. Variables</a></li>
+            <li><a href="operators.html">1.2. Operators</a></li>
+            <li><a href="conditional.html">1.3. Conditional Statements (if, ...else if, switch)</a>
+            </li>
+            <li><a href="loops.html">1.4. Loops (for loops ands while loops)</a></li>
+            <li><a href="functions.html">1.5. Functions</a></li>
+            <li><a href="objects.html">1.6. JS Objects - General Overview</a></li>
+            <li><a href="built-in.html">1.7. JS Built-in Objects - Date, Math, Numbers, RegExp,
+                Global</a></li>
+            <li><a href="arrays.html">1.8. Array Object</a></li>
+            <li><a href="strings.html">1.9. String Object</a></li>
+        </ul>
+        <ul id="sideNav-JWB" style="display: none;">
+            <li><a href="browser.html">2.1. Browser Objects</a></li>
+            <li><a href="web.html">2.2. HTML Objects</a></li>
+            <li><a href="events.html">2.3. Events</a></li>
+        </ul>
+    </div>
+
+    <div id="content" class="float-right">
+        <section class="nameDefinition">
+            <h3>1.4. Loops (for loop and while loop)</h3>
+            <p>Loops are commands that are executed repeatedly until a condition is met (condition
+                true);<br/>
+                Any loop has three statements, each separated with a semicolon:<br/> <em>1. INITIAL;
+                    2. CONDITION; 3. INCREMENT</em> <br/>
+                <b>Initialization:</b> Used to keep track of loops variable; declared and given
+                value witch is number of execution for loops.<br/>
+                <b>Test condition:</b> Code in statement will keep executing if the test condition
+                is true.<br/>
+                <b>Increment:</b> Variables in test conditions have their values incremented with ++
+                operator; repeated every loop of code(can also decrease value --).<br/>
+                <em><b>Block of Code:</b></em> Code to be executed is inside { Curly Braces; } //
+                Statements can be written repeatedly just using loop.</p>
+        </section>
+        <section class="generalSyntax">
+            <h5>For Loop Syntax</h5>
+            <p class="JScode">for (statement 1; statement 2; statement 3) { Can loop on Conditions,
+                or using the i variable can place data into the loop; } // Here we have the syntax
+                basics.</p>
+        </section>
+        <section class="methods">
+            <h5>For Loop Methods</h5>
+            <p><b>For/In Loop:</b> Statement loops through the properties of an object.</p>
+            <p class="JScode">for (a in x) { writetxt += x[a]; } // This example shows for loop
+                placing x into a.</p>
+            <p><b>For/Of Loop:</b> Loop over data structures that are iterable such as Arrays,
+                Strings, Maps, NodeLists and more.</p>
+            <p class="JScode">for (aVariable of varIteration) { code block to be executed; } //
+                Using for varIteration can also be iterated into aVariable.</p>
+
+            <h4>While Loop</h4>
+            <p>Loops through a block of code as long as a Specified Condition is true. test a
+                condition and keep looping while true.</p>
+            <section class="generalSyntax">
+                <h5>While Loop Syntax</h5>
+                <p class="JScode">while (condition) { code block to be executed; i++; } // while a
+                    condition is true will execute the code block. Notice that this Statement only
+                    has a condition, and the Increment statement is inside of the code.</p>
+            </section>
+            <section class="methods">
+                <h5>While Loop Methods</h5>
+                <p><b>Do/While Loop:</b> Variant of while loop and will execute the code block once,
+                    before checking if the condition is true; use if necessary.</p>
+                <p class="JScode">do { code block to be executed; i++; } while (condition); // Like
+                    while loop, but will execute the code based on while condition, not from while
+                    condition.</p>
+            </section>
+
+            <h4>Code Examples</h4>
+            <p id="variables" class="JScode" style="display:none">
+                var i, l, aVariable = "a";<br/>
+                var x, a = ["value1", "value2"], b = [12, 32, "Hello", aVariable];<br/>
+
+                for (i = 0; i < 4; i++) { document.write(" // loops<em>for (i = 0; i < 4; i++)</em>
+                Displaying this text 4 times.<br/>"); }<br/>
+
+                for (x in b) { document.write(" // Variable B into x - " + b[x] + " Giving it
+                values, as b[x] (b into x).<br/>"); }<br/>
+                for (l of a) { document.write(" // for (l of a) - Places:" + l + " values from
+                variable a"); }<br/>
+
+                var i = 0;<br/>
+                while (i < 2) { document.write(" // while (i < 2) the values are
+                written/executed.<br/>" + a); i++; }<br/>
+                var i = 0;<br/>
+                do { document.write("<br/>// do: " + b + " - values"); i++; }<br/>
+                while (i < 2);</p>
+
+            <script>
+                function myFunction() {
+                var x = document.getElementById("variables");
+                if (x.style.display === "none") {
+                x.style.display = "block"
+                } else {
+                x.style.display = "none";
+                }
+                }
+            </script>
+            <p>Code Examples: <input type="button" value="Show/Hide" onclick="myFunction()"> ; or
+                for a working Code Link: <a href="loop_example.html">Click Here</a></p>
+
+        </section>
+    </div>
+</div>
+
+<footer>
+    <p class="copyright float-left">&copy; Copyright 2020, Stefano De Rose <br/> References: <a
+            href="https://www.w3schools.com/js/js_loop_for.asp">https://www.w3schools.com/js/js_loop_for.asp</a>
+    </p>
+    <p class="breadcrumbs float-right text-align-R"><a href="StefanoDeRose_JSFinal.html">JavaScript
+        Language Fundamentals</a>
+        <br/><a href="browser.html">JavaScript - Web Browser - Web Document Interaction</a></p>
+</footer>
+</body>
+</html>

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Javascript Overview (1.3 Conditional Statements (if, ...else if, switch))</title>
+    <!-- External Style sheets -->
+    <link rel="stylesheet" type="text/css" href="CSS/reset.css">
+    <link rel="stylesheet" type="text/css" href="CSS/fonts.css">
+    <link rel="stylesheet" type="text/css" href="CSS/global_css.css">
+</head>
+<body>
+
+<h1>Javascript Overview</h1>
+<h2>By: Stefano DeRose</h2>
+<noscript><br/><em> This webpage will require JavaScript to be enabled (Enable Scripts in your
+    Browsers Options).</em></noscript>
+<div id="navigation">
+    <ul id="mainNav">
+        <li><a href="StefanoDeRose_JSFinal.html"
+               onClick="document.getElementById('sideNav-JWB').style.display = 'none';
+        document.getElementById('sideNav-JLF').style.display = 'block';">
+            JavaScript Language Fundamentals</a></li>
+        <li><a href="#"
+               onClick="document.getElementById('sideNav-JLF').style.display = 'none';
+        document.getElementById('sideNav-JWB').style.display = 'block'; return false">
+            JavaScript - Web Document Interaction </a></li>
+    </ul>
+</div>
+<div id="mainContent">
+    <div id="sideNav">
+        <ul id="sideNav-JLF" style="display: block;">
+            <li><a href="variables.html">1.1. Variables</a></li>
+            <li><a href="operators.html">1.2. Operators</a></li>
+            <li><a href="conditional.html">1.3. Conditional Statements (if, ...else if, switch)</a>
+            </li>
+            <li><a href="loops.html">1.4. Loops (for loops ands while loops)</a></li>
+            <li><a href="functions.html">1.5. Functions</a></li>
+            <li><a href="objects.html">1.6. JS Objects - General Overview</a></li>
+            <li><a href="built-in.html">1.7. JS Built-in Objects - Date, Math, Numbers, RegExp,
+                Global</a></li>
+            <li><a href="arrays.html">1.8. Array Object</a></li>
+            <li><a href="strings.html">1.9. String Object</a></li>
+        </ul>
+        <ul id="sideNav-JWB" style="display: none;">
+            <li><a href="browser.html">2.1. Browser Objects</a></li>
+            <li><a href="web.html">2.2. HTML Objects</a></li>
+            <li><a href="events.html">2.3. Events</a></li>
+        </ul>
+    </div>
+    <div id="content" class="float-right">
+        <section class="nameDefinition">
+            <h3>1.3 Conditional Statements (Code Example)</h3>
+        </section>
+        <p>
+            <script>
+                var x = "Hello";
+                var y = "Hello";
+                var z = "New";
+
+                document.write("// This Script code shows Conditional Statements as well as the fundamentals of Comparison and Logical Operators." + "<br/>")
+
+                if (3 > 2) { document.write("// This shows a condition as: if (3 > 2) witch is true so this code executes as string (text) data here." + "<br/>") }
+
+                if (12 >= 18) { } else { document.write("// This example does the same but with numbers and compares using the >= (Greater than or Equal to) Operator as: if (12 >= 18)" +
+                "Since this is false the code is executed within else braces." + "<br/>") }
+                if (2 > 3 && x == y) { document.write("// This Statements show: if (2 > 3 && x == y) - And will only show as true if left comparison and right are true." + "<br/>") } else { document.write("This code did not run.") }
+                if (2 > 3 || x == y) { document.write("// This Statements show: if (2 > 3 || x == y) - Or will always show as true if left comparison or right are true." + "<br/>") } else { document.write("This code did not run.") }
+
+                if (!x == y) { document.write("// This Statements Condition Same") } else { document.write("//This code runs because else is provided; if (!x == y) is now made false." + "<br/>") }
+
+                if (3 < 2) { } else if (3 > 2) { document.write("else if is run inside this write statement.") } else { document.write("1234567890") }
+
+                switch (z) { case "New": case 21: x = 10; break;
+                    case 11: document.write("// Does not Execute."); break;
+                    case x = 10: document.write("// X was changed to 10.");  break;
+                    default: document.write("// Does not execute the Default or this would show in the output document."); break; }
+                    document.write("// The final switch statement uses as its parameter (z) to find in our first case its own value and another to find 21(===); next we use this to execute a new value to x(10)." +
+                    " and now a case statement is made to show case again (11) and does not execute(because false). X Now 10:");
+            </script>
+        </p>
+    </div>
+    <section class="exampleCode">
+        <h4>Code Examples</h4>
+        <p id="variables" class="JScode" style="display:none">
+            var x = "Hello";<br/>
+            var y = "Hello";<br/>
+            var z = "New";<br/>
+
+            document.write("// This Script code shows Conditional Statements as well as the
+            fundamentals of Comparison and Logical Operators." + "<br/>")<br/>
+            if (3 > 2) { document.write("// This shows a condition as: if (3 > 2) witch is true so
+            this code executes as string (text) data here." + "<br/>") }<br/>
+
+            if (12 >= 18) { } else { document.write("// This example does the same but with numbers
+            and compares using the >= (Greater than or Equal to) Operator as: if (12 >= 18)" +<br/>
+            "Since this is false the code is executed within else braces." + "<br/>") }<br/>
+            if (2 > 3 && x == y) { document.write("// This Statements show: if (2 > 3 && x == y) -
+            And will only show as true if left comparison and right are true." + "<br/>") } else {
+            document.write("This code did not run.") }<br/>
+            if (2 > 3 || x == y) { document.write("// This Statements show: if (2 > 3 || x == y) -
+            Or will always show as true if left comparison or right are true." + "<br/>") } else {
+            document.write("This code did not run.") }<br/>
+
+            if (!x == y) { document.write("// This Statements Condition Same") } else {
+            document.write("//This code runs because else is provided; if (!x == y) is now made
+            false." + "<br/>") }<br/>
+            if (3 < 2) { } else if (3 > 2) { document.write("else if is run inside this write
+            statement.") } else { document.write("1234567890") }<br/>
+
+            switch (z) { case "New": case 21: x = 10; break;<br/>
+            case 11: document.write("// Does not Execute."); break;<br/>
+            case x = 10: document.write("// X was changed to 10."); break;<br/>
+            default: document.write("// Does not execute the Default or this would show in the
+            output document."); break; }<br/>
+            document.write("// The final switch statement uses as its parameter (z) to find in our
+            first case its own value and another to find 21(===); next we use this to execute a new
+            value to x(10)." +<br/>
+            " and now a case statement is made to show case again (11) and does not execute(because
+            false). X Now 10:");</p>
+
+        <script>
+            function myFunction() {
+            var x = document.getElementById("variables");
+            if (x.style.display === "none") {
+            x.style.display = "block"
+            } else {
+            x.style.display = "none";
+            }
+            }
+        </script>
+        <input type="button" value="Show/Hide" onclick="myFunction()">
+    </section>
+</div>
+
+<footer>
+    <p class="copyright float-left">&copy; Copyright 2020, Stefano De Rose</p>
+    <p class="breadcrumbs float-right text-align-R"><a href="StefanoDeRose_JSFinal.html">JavaScript
+        Language Fundamentals</a>
+        <br/><a href="browser.html">JavaScript - Web Browser - Web Document Interaction</a></p>
+</footer>
+</body>
+</html>
